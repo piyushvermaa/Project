@@ -22,8 +22,8 @@ const CardDeal = () => {
 
     tl.fromTo(
       cardRef.current,
-      { autoAlpha: 0 }, // Start with opacity 0
-      { autoAlpha: 1 } // Fade in as the trigger element enters the viewport
+      { autoAlpha: 0, scale: 0.5 }, // Start with opacity 0 and scale down
+      { autoAlpha: 1, scale: 1 } // Fade in and scale up as the trigger element enters the viewport
     );
 
     return () => {
@@ -48,7 +48,7 @@ const CardDeal = () => {
       <div
         className={`${layout.sectionImg}`}
         ref={cardRef}
-        style={{ opacity: 0 }} // Start with opacity 0
+        style={{ opacity: 0, transform: "scale(0.5)" }} // Start with opacity 0 and scale down
       >
         <img src={card} alt="billing" className="w-[100%] h-[100%]" />
       </div>

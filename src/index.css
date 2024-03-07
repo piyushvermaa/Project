@@ -148,3 +148,26 @@
     background-position: 100% 50%;
   }
 }
+
+.bg-gradient-dark-blue-purple {
+  font-family: Arial, sans-serif; /* Change font family if needed */
+  background: linear-gradient(45deg, #071e3d, #001833, #0e0c18, #1d1231);
+
+
+
+
+  background-size: 400% 400%; /* Adjust gradient size */
+  animation: gradientChange 10s ease infinite; /* Adjust animation duration */
+}
+
+@keyframes gradientChange {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
